@@ -8,7 +8,9 @@ public final class MockCurrentSubscription {
     public static void makeTheSubscriptionCloseToExpiration() {
         stubFor(
                get(urlEqualTo("/api/subscriptions/current"))
-                       .willReturn(aResponse().withBodyFile("current_subscription.json"))
+                       .willReturn(
+                               aResponse()
+                                       .withBodyFile("current_subscription.json"))
         );
     }
 }

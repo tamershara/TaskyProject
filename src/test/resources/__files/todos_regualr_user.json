@@ -1,0 +1,27 @@
+{
+  "todos": [
+    {
+      "id": "d925af3f-b79c-4dc2-902b-4ffdc3fab2e6",
+      "userId": "e737a50d-2b91-47c7-8a18-139bc87d56cc",
+      "title": "Automate register",
+      "isCompleted": 0,
+      "createdAt": "2025-04-05T18:19:19.000Z"
+    },
+    {
+      "id": "725d5174-5c27-4750-9d82-0d6c4f79fe53",
+      "userId": "e737a50d-2b91-47c7-8a18-139bc87d56cc",
+      "title": "Automate login",
+      "isCompleted": 0,
+      "createdAt": "2025-04-05T18:19:16.000Z"
+    },
+    {
+      "id": "9859fccd-95d0-4b5d-a8c7-08ecfcde4492",
+      "userId": "e737a50d-2b91-47c7-8a18-139bc87d56cc",
+      "title": "Automate subscription",
+      "isCompleted": 0,
+      "createdAt": "2025-04-05T18:19:05.000Z"
+    }
+  ],
+  "total": 3,
+  "totalPages": 1
+}
