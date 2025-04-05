@@ -13,14 +13,4 @@ public class TodosMocker {
                         )
         );
     }
-
-    public static void mockTodosForAdvancedUser() {
-        stubFor(
-                get(urlEqualTo("/api/todos?page=2&limit=10"))
-                        .willReturn(
-                                aResponse()
-                                        .withBodyFile("todos_advanced_user.json")
-                        )
-        );
-    }
 }
