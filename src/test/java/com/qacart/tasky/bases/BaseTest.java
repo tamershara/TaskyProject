@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static com.qacart.tasky.driver.managers.DriverManager.getDriver;
+import static com.qacart.tasky.utilites.ScreenshotUtils.takeScreenShot;
 
 public class BaseTest {
     protected WireMockServer wireMockServer;
@@ -34,6 +35,7 @@ public class BaseTest {
 
     @AfterMethod
     protected void tearDown(ITestResult result) throws IOException {
+        takeScreenShot(result);
         getDriver().quit();
         wireMockServer.stop();
     }
