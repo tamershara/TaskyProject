@@ -1,4 +1,4 @@
-package com.qacart.tasky.clients;
+package com.qacart.tasky.bases;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;

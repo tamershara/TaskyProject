@@ -1,5 +1,6 @@
 package com.qacart.tasky.pages;
 
+import com.qacart.tasky.bases.BasePage;
 import org.openqa.selenium.By;
 
 import static com.qacart.tasky.configs.ConfigFactory.getConfig;
