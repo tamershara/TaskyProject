@@ -1,7 +1,9 @@
 package com.qacart.tasky.driver.managers;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public final class FirefoxManager {
     private FirefoxManager() {}
@@ -10,6 +12,13 @@ public final class FirefoxManager {
     }
     public static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions options = new FirefoxOptions();
+        Proxy proxy = new Proxy();
+        proxy.setSslProxy("localhost:8081");
+        FirefoxProfile profile = new FirefoxProfile();
+        profile.setAcceptUntrustedCertificates(true);
+        profile.setAssumeUntrustedCertificateIssuer(false);
+        options.setProfile(profile);
+        options.setProxy(proxy);
         options.addArguments("--start-maximized");
         return options;
     }

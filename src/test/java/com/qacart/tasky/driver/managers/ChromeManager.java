@@ -1,5 +1,6 @@
 package com.qacart.tasky.driver.managers;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -11,7 +12,11 @@ public final class ChromeManager {
     }
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
+        Proxy proxy = new Proxy();
+        proxy.setSslProxy("localhost:8081");
         options.addArguments("--start-maximized");
+        options.addArguments("--ignore-certificate-errors");
+        options.setProxy(proxy);
         return options;
     }
 }
