@@ -13,9 +13,10 @@ public final class ChromeManager {
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         Proxy proxy = new Proxy();
-        proxy.setSslProxy("localhost:8081");
+        proxy.setSslProxy("localhost:8091");
         options.addArguments("--start-maximized");
         options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--disable-web-security");
         options.setProxy(proxy);
         return options;
     }
