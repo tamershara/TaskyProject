@@ -13,10 +13,11 @@ public final class FirefoxManager {
     public static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions options = new FirefoxOptions();
         Proxy proxy = new Proxy();
-        proxy.setSslProxy("localhost:8081");
+        proxy.setSslProxy("localhost:8091");
         FirefoxProfile profile = new FirefoxProfile();
         profile.setAcceptUntrustedCertificates(true);
         profile.setAssumeUntrustedCertificateIssuer(false);
+        profile.setPreference("security.fileuri.strict_origin_policy", false);
         options.setProfile(profile);
         options.setProxy(proxy);
         options.addArguments("--start-maximized");

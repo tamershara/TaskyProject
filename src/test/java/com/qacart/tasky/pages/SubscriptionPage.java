@@ -13,7 +13,7 @@ public class SubscriptionPage implements BasePage {
         getDriver().get(getConfig().pageBaseURL() + "/dashboard/subscription");
     }
 
-    public void SubscribeUsingAPI(SubscriptionData subscription,String token) {
+    public void subscribeUsingAPI(SubscriptionData subscription,String token) {
         subscribeAPI(subscription,token);
     }
 }
