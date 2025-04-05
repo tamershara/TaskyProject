@@ -7,6 +7,8 @@ import com.qacart.tasky.pages.DashboardPage;
 import com.qacart.tasky.pages.LoginPage;
 import com.qacart.tasky.pages.RegisterPage;
 import com.qacart.tasky.pages.TodoPage;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,6 +17,7 @@ import static com.qacart.tasky.fixtures.UserFixture.getDefaultUserForLogin;
 import static com.qacart.tasky.fixtures.UserFixture.getDefaultUserForRegister;
 import static com.qacart.tasky.mocker.TodosMocker.mockTodosForRegularUser;
 
+@Feature("Todos Test Cases")
 public class MaximumTodosAlertRegularUserTest extends BaseTest {
     private final RegisterPage registerPage = new RegisterPage();
     private final LoginPage loginPage = new LoginPage();
@@ -24,15 +27,15 @@ public class MaximumTodosAlertRegularUserTest extends BaseTest {
     public void setUp() {
         registerPage.loadPage();
         UserRegistration userDataRegistration = getDefaultUserForRegister();
-        registerPage.registerUsingAPI(userDataRegistration);
+        registerPage.registerUser(userDataRegistration);
         loginPage.loadPage();
         UserLogin userForLogin = getDefaultUserForLogin();
-        loginPage.loginUsingAPI(userForLogin);
+        loginPage.loginUser(userForLogin);
         dashboardPage.loadPage();
-        todoPage.loadPage();
     }
 
-    @Test
+    @Story("Test case to test alert maximum todos")
+    @Test(description = "Maximum alert message should be appear if the todos is 3")
     public void MaximumAlertMessageShouldBeShownIfTheRegularUserHaveThreeTodos() {
         mockTodosForRegularUser();
         todoPage.loadPage();
