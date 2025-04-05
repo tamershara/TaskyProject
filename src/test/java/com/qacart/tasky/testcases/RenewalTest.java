@@ -25,6 +25,7 @@ public class RenewalTest extends BaseTest {
     private final LoginPage loginPage = new LoginPage();
     private final DashboardPage dashboardPage = new DashboardPage();
     private final SubscriptionPage subscriptionPage = new SubscriptionPage();
+
     @BeforeMethod
     public void setUp() throws InterruptedException {
         registerPage.loadPage();
@@ -36,7 +37,7 @@ public class RenewalTest extends BaseTest {
         dashboardPage.loadPage();
         dashboardPage.clickSubscriptionTab();
         SubscriptionData subscriptionData = getSubscriptionData();
-        subscriptionPage.subscribeUsingAPI(subscriptionData,accessToken);
+        subscriptionPage.subscribeUsingAPI(subscriptionData, accessToken);
     }
 
     @Story("Test Renewal Alert")

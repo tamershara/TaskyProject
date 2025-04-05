@@ -8,7 +8,8 @@ import static com.qacart.tasky.bases.BaseClient.getDefaultRequestSpec;
 
 
 public final class UserClient {
-    private UserClient() {}
+    private UserClient() {
+    }
 
     public static Response registerAPI(UserRegistration user) {
 

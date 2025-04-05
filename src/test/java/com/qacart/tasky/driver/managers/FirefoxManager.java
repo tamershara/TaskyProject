@@ -6,10 +6,13 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
 public final class FirefoxManager {
-    private FirefoxManager() {}
+    private FirefoxManager() {
+    }
+
     public static FirefoxDriver getFirefoxDriver() {
         return new FirefoxDriver(getFirefoxOptions());
     }
+
     public static FirefoxOptions getFirefoxOptions() {
         FirefoxOptions options = new FirefoxOptions();
         Proxy proxy = new Proxy();

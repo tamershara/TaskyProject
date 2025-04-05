@@ -7,7 +7,9 @@ import static com.qacart.tasky.configs.ConfigFactory.getConfig;
 import static io.restassured.RestAssured.given;
 
 public final class BaseClient {
-    private BaseClient() {}
+    private BaseClient() {
+    }
+
     public static RequestSpecification getDefaultRequestSpec() {
         return given()
                 .baseUri(getConfig().apiURL())

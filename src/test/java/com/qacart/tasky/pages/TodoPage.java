@@ -9,6 +9,7 @@ import static com.qacart.tasky.driver.managers.DriverManager.getDriver;
 
 public class TodoPage implements BasePage {
     private final By LimiterMessageLocator = By.cssSelector("div.MuiAlert-message");
+
     @Step
     @Override
     public void loadPage() {

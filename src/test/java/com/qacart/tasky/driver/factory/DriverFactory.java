@@ -12,7 +12,9 @@ import java.util.function.Supplier;
 import static com.qacart.tasky.configs.ConfigFactory.getConfig;
 
 public final class DriverFactory {
-    private DriverFactory() {}
+    private DriverFactory() {
+    }
+
     public final static Map<BrowserType, Supplier<WebDriver>> DRIVERS = new HashMap<>();
 
     static {

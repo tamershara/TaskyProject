@@ -16,6 +16,7 @@ import static com.qacart.tasky.utilites.ScreenshotUtils.takeScreenShot;
 
 public class BaseTest {
     protected WireMockServer wireMockServer;
+
     @BeforeMethod
     protected void setUpDriver() {
         Driver.initialize();
@@ -24,11 +25,7 @@ public class BaseTest {
 
     @BeforeMethod
     protected void setUpMockServer() {
-        wireMockServer = new WireMockServer(
-                new WireMockConfiguration()
-                        .port(8091)
-                        .enableBrowserProxying(true)
-        );
+        wireMockServer = new WireMockServer(new WireMockConfiguration().port(8091).enableBrowserProxying(true));
         wireMockServer.start();
         WireMock.configureFor("localhost", 8091);
     }

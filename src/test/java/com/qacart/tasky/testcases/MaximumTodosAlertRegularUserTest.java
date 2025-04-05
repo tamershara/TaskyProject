@@ -23,6 +23,7 @@ public class MaximumTodosAlertRegularUserTest extends BaseTest {
     private final LoginPage loginPage = new LoginPage();
     private final DashboardPage dashboardPage = new DashboardPage();
     private final TodoPage todoPage = new TodoPage();
+
     @BeforeMethod
     public void setUp() {
         registerPage.loadPage();

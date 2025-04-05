@@ -6,7 +6,9 @@ import io.restassured.response.Response;
 import static com.qacart.tasky.bases.BaseClient.getAuthenticatedRequestSpec;
 
 public final class SubscriptionClient {
-    private SubscriptionClient() {}
+    private SubscriptionClient() {
+    }
+
     public static Response subscribeAPI(SubscriptionData subscriptionData, String token) {
         return getAuthenticatedRequestSpec(token)
                 .body(subscriptionData)

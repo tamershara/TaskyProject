@@ -8,12 +8,6 @@ public class TodosMocker {
 
     @Step
     public static void mockTodosForRegularUser() {
-        stubFor(
-                get(urlEqualTo("/api/todos?page=1&limit=5"))
-                        .willReturn(
-                                aResponse()
-                                        .withBodyFile("todos_regualr_user.json")
-                        )
-        );
+        stubFor(get(urlEqualTo("/api/todos?page=1&limit=5")).willReturn(aResponse().withBodyFile("todos_regualr_user.json")));
     }
 }

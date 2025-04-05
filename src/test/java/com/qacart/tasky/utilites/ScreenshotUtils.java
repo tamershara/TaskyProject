@@ -14,19 +14,15 @@ import java.io.InputStream;
 import static com.qacart.tasky.driver.managers.DriverManager.getDriver;
 
 public final class ScreenshotUtils {
-    private ScreenshotUtils() {}
+    private ScreenshotUtils() {
+    }
 
     public static void takeScreenShot(ITestResult result) throws IOException {
         TakesScreenshot screenshot = ((TakesScreenshot) getDriver());
         File file = screenshot.getScreenshotAs(OutputType.FILE);
-        String imagePath = "target"
-                + File.separator
-                + "screenshots"
-                + File.separator
-                + result.getMethod().getMethodName()
-                + ".png";
+        String imagePath = "target" + File.separator + "screenshots" + File.separator + result.getMethod().getMethodName() + ".png";
         InputStream inputStream = new FileInputStream(file);
-        FileUtils.copyFile(file,new File(imagePath));
-        Allure.addAttachment(result.getMethod().getMethodName(),inputStream);
+        FileUtils.copyFile(file, new File(imagePath));
+        Allure.addAttachment(result.getMethod().getMethodName(), inputStream);
     }
 }

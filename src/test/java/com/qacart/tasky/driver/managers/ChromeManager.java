@@ -5,11 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public final class ChromeManager {
-    private ChromeManager() {}
+    private ChromeManager() {
+    }
 
     public static ChromeDriver getChromeDriver() {
         return new ChromeDriver(getChromeOptions());
     }
+
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         Proxy proxy = new Proxy();

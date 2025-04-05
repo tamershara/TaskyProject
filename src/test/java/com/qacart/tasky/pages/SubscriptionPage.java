@@ -16,7 +16,7 @@ public class SubscriptionPage implements BasePage {
     }
 
     @Step
-    public void subscribeUsingAPI(SubscriptionData subscription,String token) {
-        subscribeAPI(subscription,token);
+    public void subscribeUsingAPI(SubscriptionData subscription, String token) {
+        subscribeAPI(subscription, token);
     }
 }
