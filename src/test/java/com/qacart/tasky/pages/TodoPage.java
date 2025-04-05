@@ -10,7 +10,7 @@ public class TodoPage implements BasePage {
     private final By LimiterMessageLocator = By.cssSelector("div.MuiAlert-message");
     @Override
     public void loadPage() {
-        getDriver().get(getConfig().pageBaseURL() + "/dashboard");
+        getDriver().get(getConfig().pageBaseURL() + "/dashboard/todos");
     }
 
     public String getLimiterMessage() {
