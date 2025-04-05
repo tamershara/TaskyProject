@@ -1,5 +1,6 @@
 package com.qacart.tasky.pages;
 
+import com.qacart.tasky.bases.BasePage;
 import com.qacart.tasky.model.SubscriptionData;
 
 import static com.qacart.tasky.clients.SubscriptionClient.subscribeAPI;

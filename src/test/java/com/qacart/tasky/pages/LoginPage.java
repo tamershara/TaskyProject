@@ -1,5 +1,6 @@
 package com.qacart.tasky.pages;
 
+import com.qacart.tasky.bases.BasePage;
 import com.qacart.tasky.model.LoginResponse;
 import com.qacart.tasky.model.UserLogin;
 import io.restassured.response.Response;

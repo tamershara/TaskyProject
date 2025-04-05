@@ -1,4 +1,4 @@
-package com.qacart.tasky.pages;
+package com.qacart.tasky.bases;
 
 public interface BasePage {
     void loadPage();

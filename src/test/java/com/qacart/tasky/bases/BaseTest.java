@@ -1,4 +1,4 @@
-package com.qacart.tasky.testcases;
+package com.qacart.tasky.bases;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
